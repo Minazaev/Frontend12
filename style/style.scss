@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 91px;
+    border-bottom: 1px solid #D4D7E5;
+}
+
+.container{
+    max-width: 1300px;
+}
+
+
+.main-text{
+    color: var(--gray-dark, #3F4255);
+/* Title/banners_or_infographic */
+    font-family: "Poppins";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 64px; /* 110.345% */
+    letter-spacing: 2.9px;
+}
+
+
+.navbar{
+    column-gap: 20px;
+}
+
+.main-footer{
+    width: 872px;
+    height: 104px;
+    background-color: white;
+    filter: drop-shadow(0px 8px 40px rgba(0, 0, 0, 0.08));
+    color: var(--gray-dark, #3F4255);
+    font-family: "Martel Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin btnDefault($fsaize, $ffamily, $bg, $border, $height, $width, $py, $px){
+    font-size: $fsaize;
+    font-family: $ffamily;
+    background-color: $bg;
+    border: $border;
+    height: $height;
+    width: $width;
+    padding: $py $px;
+}
+
+.main-btn{
+    @include btnDefault(16px, "Martel Sans", white, 2px solid #FFE145, 72px, auto, 16px, 24px)
+}
+
+.title{
+    margin-top: 48px;
+    // width: 1256px;
+    height: 48px;
+
+    h1{
+        width: 1136px;
+        color: var(--gray-dark, #3F4255);
+        font-family: "Poppins";
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 64px; /* 177.778% */
+        letter-spacing: 2.88px;
+    }
+
+    .show-btn{
+        @include btnDefault(16px, "Martel Sans", #F2F4FA, 0, 48px, auto, 16px, 24px)
+    }
+}
+
+.carousel{
+    .img{
+        width: 296px;
+        height: 296px;
+        padding: 48px 92px;
+        box-shadow: 0px 2px 16px 0px rgba(60, 62, 74, 0.08);
+    }
+}
+
+.adress-block{
+    width: auto;
+    height: 297px;
+    background-color: #F2F4FA;
+    .adress-block__text{
+        h1{
+        color: var(--gray-dark, #3F4255);
+        font-family: "Poppins";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 64px; /* 177.778% */
+        letter-spacing: 2.88px;
+        // margin-bottom: 24px;
+        // margin-right: 159px;
+        }
+        p{
+        max-width: 424px;
+        height: 48px;
+        color: var(--gray-dark, #3F4255);
+        font-family: Martel Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.5px;
+        }
+    }
+    .input{
+        width: 336px;
+        height: 72px;
+        padding: 24px 16px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .button{
+        background: var(--brand-yellow-bright, #FFE145);
+        height: 72px;
+        padding: 28px 24px;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,8 @@
+@media (max-width: 800px){
+    .main-desc{
+        flex-direction: column;
+    }
+    .main-footer{
+        flex-direction: column;
+    }
+}
