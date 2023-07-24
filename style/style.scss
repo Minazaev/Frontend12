@@ -46,7 +46,7 @@
     font-weight: 300;
 }
 
-@mixin btnDefault($fsaize, $ffamily, $bg, $border, $height, $width, $py, $px){
+@mixin btnDefault($fsaize, $ffamily, $bg, $border, $height, $width, $py, $px, $fweight){
     font-size: $fsaize;
     font-family: $ffamily;
     background-color: $bg;
@@ -54,10 +54,20 @@
     height: $height;
     width: $width;
     padding: $py $px;
+    font-weight: $fweight;
 }
 
 .main-btn{
-    @include btnDefault(16px, "Martel Sans", white, 2px solid #FFE145, 72px, auto, 16px, 24px)
+    @include btnDefault(16px, "Martel Sans", white, 2px solid #FFE145, 72px, auto, 16px, 24px, 700px)
+}
+
+.main-btn-subtitle{
+    color: var(--gray-dark, #3F4255);
+    font-family: Martel Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
 }
 
 .title{
@@ -76,7 +86,7 @@
     }
 
     .show-btn{
-        @include btnDefault(16px, "Martel Sans", #F2F4FA, 0, 48px, auto, 16px, 24px)
+        @include btnDefault(16px, "Martel Sans", #F2F4FA, 0, 48px, auto, 16px, 24px, 0)
     }
 }
 
@@ -84,7 +94,7 @@
     .img{
         width: 296px;
         height: 296px;
-        padding: 48px 92px;
+        // padding: 48px 92px;
         box-shadow: 0px 2px 16px 0px rgba(60, 62, 74, 0.08);
     }
 }
@@ -93,6 +103,7 @@
     width: auto;
     height: 297px;
     background-color: #F2F4FA;
+    padding: 80px 172px;
     .adress-block__text{
         h1{
         color: var(--gray-dark, #3F4255);
@@ -100,38 +111,149 @@
         font-size: 36px;
         font-style: normal;
         font-weight: 300;
-        line-height: 64px; /* 177.778% */
+        line-height: 64px;
         letter-spacing: 2.88px;
-        // margin-bottom: 24px;
-        // margin-right: 159px;
         }
         p{
         max-width: 424px;
         height: 48px;
         color: var(--gray-dark, #3F4255);
-        font-family: Martel Sans;
+        font-family: "Martel Sans";
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
-        line-height: 24px; /* 150% */
+        line-height: 24px;
         letter-spacing: 0.5px;
         }
     }
     .input{
         width: 336px;
+        position: relative;
         height: 72px;
         padding: 24px 16px;
         justify-content: center;
-        align-items: flex-start;
         gap: 8px;
     }
-
-    .button{
-        background: var(--brand-yellow-bright, #FFE145);
+    .location-img{
+        position: absolute;
+        align-items: center;
+        display: flex;
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .btn-send{
+        background-color: #FFE145;
         height: 72px;
-        padding: 28px 24px;
+        padding: 24px 28px;
         align-items: center;
         gap: 10px;
         flex-shrink: 0;
+        border: none;
+        border-radius: 4px;
     }
 }
+
+
+.specialities-item{
+    width: 136px;
+    height: 136px;
+    padding: 24px 8px;
+}
+
+.bg-limon{
+    height: 284px;
+    background: url(../img/bg.png), lightgray -445px -158.838px / 142.116% 479.14% no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: fill;
+}
+.restaurant-franchise-item{
+    column-gap: 54px;
+}
+
+.map{
+    width: 1280px;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.instagram{
+    margin-left: 72px;
+}
+
+.instagram-items{
+    column-gap: 24px;
+    margin-left: 72px;
+}
+
+.bg-blue{
+    background-color: #3F4255;
+
+    .footer{
+        padding: 52px 92px;
+    }
+
+    .footer-logo{
+        border-bottom: 1px solid #D4D7E5;
+        width: 184.049px;
+        height: 24px;
+        margin-bottom: 96px;
+        
+    }
+
+
+    .footer-logo-platform{
+        column-gap: 10px;
+    }
+
+    .about-us{
+        .about-title{
+            color: var(--white, #FFF);
+            font-family: "Poppins";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+
+        .list{
+            column-gap: 160px;
+        }
+        
+        .list-item{
+            color: #D4D7E5;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: "Martel Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .social-media-text{
+        color: var(--white, #FFF);
+        font-family: "Martel Sans";
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 16px;
+    }
+
+    .caption{
+        color: var(--white, #FFF);
+        font-family: "Martel Sans";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+}
+
+
